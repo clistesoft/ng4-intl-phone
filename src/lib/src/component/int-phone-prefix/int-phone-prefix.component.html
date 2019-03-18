@@ -21,6 +21,7 @@
          class="form-control"
          [maxlength]="maxLength"
          [disabled]="disabled"
+         [readonly]="isReadOnly"
          [(ngModel)]="phoneInput"
          (ngModelChange)="updatePhone()">
 </div>

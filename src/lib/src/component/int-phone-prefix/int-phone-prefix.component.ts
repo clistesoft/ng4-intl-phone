@@ -39,6 +39,9 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     maxLength = 15;
 
     @Input()
+    isReadOnly = false;
+
+    @Input()
     onlyNumbers = true;
 
     // ELEMENT REF
