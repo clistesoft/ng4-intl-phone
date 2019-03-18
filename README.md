@@ -90,6 +90,9 @@ To install this component to an external project, follow the procedure:
    ### @Input() maxLength
           maxLength (default: 15)
           
+    ### @Input() isReadOnly
+         Input tag readonly (default: false)
+          
     ### @Input() onlyNumbers
          Allows only numeric values (default: true)
     
