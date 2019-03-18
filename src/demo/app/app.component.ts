@@ -9,8 +9,8 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 <div class="card">
     <div class="row">
         <div class="col-md-6">
-            <int-phone-prefix [(ngModel)]="phoneValue"
-                              [maxLength]="30"></int-phone-prefix>
+            <int-phone [(ngModel)]="phoneValue"
+                              [maxLength]="30"></int-phone>
         </div>
         <div class="col-md-6">
             <span>The phone number is: {{phoneValue}}</span>
@@ -19,8 +19,8 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
     <form [formGroup]="myForm" (ngSubmit)="logForm(myForm.value)" novalidate>
         <div class="row mt">
             <div class="col-md-10">
-                <int-phone-prefix [locale]="'es'"
-                    formControlName="myPhone"></int-phone-prefix>
+                <int-phone [locale]="'es'"
+                    formControlName="myPhone"></int-phone>
             </div>
             <div class="col-md-2">
                <button class="btn btn-primary">Submit</button>
@@ -28,8 +28,8 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
         </div>
         <div class="row mt">
             <div class="col-md-10">
-                <int-phone-prefix [locale]="'es'"
-                    formControlName="disabledPhone"></int-phone-prefix>
+                <int-phone [locale]="'es'"
+                    formControlName="disabledPhone"></int-phone>
             </div>
         </div>
     </form>
@@ -38,7 +38,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class AppComponent implements OnInit {
     phoneValue: string;
-    private myForm: FormGroup;
+     myForm: FormGroup;
 
     constructor(libService: CountryService,
                 private formBuilder: FormBuilder) {

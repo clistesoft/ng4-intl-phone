@@ -16,7 +16,7 @@ const PLUS = '+';
 
 @Component({
     moduleId: module.id,
-    selector: 'int-phone-prefix',
+    selector: 'int-phone',
     templateUrl: './int-phone-prefix.component.html',
     styleUrls: [
         './int-phone-prefix.component.scss',
@@ -41,6 +41,8 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     @Input()
     onlyNumbers = true;
 
+    @Input()
+    readOnly = false;
     // ELEMENT REF
     phoneComponent: ElementRef;
 
